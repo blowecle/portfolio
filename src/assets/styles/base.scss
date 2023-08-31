@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,900;1,300&family=Orbitron&family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    &:after,
+    &:before{
+        box-sizing: border-box;
+    }
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    background-color: yellow;
+}
+
+button, input, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+img, video, canvas, svg {
+    max-width: 100%;
+}
+
+// variables
+$green-color: #6cff8d;
+$dark-green-color: #6cff8c7a;
