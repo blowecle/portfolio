@@ -1,0 +1,67 @@
+@import './base.scss';
+
+.skills{
+    position: relative;
+    font-size: 2rem;
+    height: 300px;
+    background: $yellow-color;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 1rem;
+    z-index: 2;
+    @media (max-width: 600px){
+        height: 250px;
+    }
+    @media (max-width: 450px){
+        height: 200px;
+    }
+    &__header {
+        font-weight: 600;
+    }
+    &__text{
+        position: absolute;
+        white-space: nowrap;
+        &--left{
+            left: 0;
+            top: 6rem;
+            animation: moveLeft 15s infinite linear;
+            @keyframes moveLeft {
+                0%{
+                    transform: translate3d(0, 0, 0);
+                }
+                100%{
+                    transform: translate3d(-50%, 0, 0);
+                }
+            }
+            @media (max-width: 600px){
+                top: 4rem;
+                font-size: 1.5rem;
+            }
+            @media (max-width: 450px){
+                top: 4rem;
+                font-size: 1.2rem;
+            }
+        }
+        &--right{
+            right: 0;
+            top: 11rem;
+            animation: moveRight 17s infinite linear;
+            @keyframes moveRight {
+                0%{
+                    transform: translate3d(0, 0, 0);
+                }
+                100%{
+                    transform: translate3d(50%, 0, 0);
+                }
+            }
+            @media (max-width: 600px){
+                top: 7rem;
+                font-size: 1.5rem;
+            }
+            @media (max-width: 450px){
+                top: 7rem;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

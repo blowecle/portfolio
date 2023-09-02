@@ -9,6 +9,7 @@
     width: 100%;
     height: 100vh;
     z-index: 99;
+    opacity: 1;
     background: #0b134f;
     display: grid;
     place-items: center;
@@ -21,7 +22,10 @@
         border-top: 3px solid $dark-green-color;
         border-bottom: 3px solid $dark-green-color;
         @media (max-width: 540px){
-            width: 90%;
+            max-width: 90%;
+        }
+        @media (max-width: 450px){
+            max-width: 80%;
         }
     }
     &__bar{
@@ -105,5 +109,20 @@
                 width: 288px;
             }
         }
+    }
+    &__svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        opacity: 0;
+        @media (max-width: 540px){
+            max-width: 80vw;
+        }
+        @media (max-width: 450px){
+            left: 30%;
+        }
+        
     }
 }
