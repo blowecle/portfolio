@@ -1,8 +1,11 @@
 import gsap from 'gsap';
+import Swiper from 'swiper';
 
 const bar = document.querySelector('.loading__bar--inner');
 const counter_number = document.querySelector('.loading__counter--number');
 let count = 0;
+
+
 
 
 let barInterval = setInterval(() => {
@@ -12,8 +15,12 @@ let barInterval = setInterval(() => {
     if (count > 100) {
         clearInterval(barInterval);
         gsap.to('.loading',{
-            delay: 4,
+            delay: 2,
             zIndex: 1,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%,-50%)",
         })
         gsap.to('.loading__bar',{
             duration: 5,
@@ -28,6 +35,7 @@ let barInterval = setInterval(() => {
         gsap.to('.loading__box',{
             duration: .5,
             borderRadius: "50%",
+            borderColor: "#6cff8d",
             height: "500px",
             width: "500px"
         })
@@ -52,3 +60,12 @@ let barInterval = setInterval(() => {
     }
 
 }, 30);
+
+const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
